@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "certificadosnanoalfa",
+  "private_key_id": "370339aa16573b05b4027a646ffe38d9d79908c6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC/VG2bF7DMc3yl\nvlOZkR9whkPGHp2wQf/3x0aQou/wRtH6A6itWKVYjrtszQ2KArdu2+eZXrvPijdC\ndTnnux7b19YpdL4S+w4KwtsqnspJTl7+HNh1YCi6KiMkBYsTUB2IREimQ93vnsli\njgW7hngJolzDqiI/Nt0yJWnPbbXR9vrmTtnf8eVYSAY/4zt9+YEbS3Q8X39IEjFG\ndRNGJ35GHXotdMPHjKprtkZFU9rTeIRGsKbiPqee19HyjcPylEScVUr/+V9M9rq0\n770PGc6Hozam04r+C2wFmRNRtB+XvOFQN8rLna8yEwtuCbsgTYZKo+OhwQtPWaXk\nT3P9YubXAgMBAAECggEAChRMC+IVHcgttluO8uWaxuZD1sGRJBJuBiMY3BDBXCKW\n+DlOHweu+jnWtNYekvkuqafrDQDZGwdYfudHDCam6wT1UszEIKLaLAX03strs63t\nwixJ2PEeZCRJIqIqH/PWAnI6c4vaur9eM5NwyN6+Hx/PDD2/vR3KTFR9PQC2Fd/6\nIbLiupZ0np/JS6mP9IYq5B+kTsQQJsTqKO7Nre6wOhWtc+IBs9xYMtMoD90LXIg7\n2B6b7csZcFLOQBFKOyOO1A2+xuVwG3G1PUAjG63TClIEoUcY9S0cItGe4N13C4Bp\nk0qykP1Lyv+wzhczgDOE/Z2uWiK2Ha0IijaMybgVFQKBgQDowKSZT74RenKQYavm\nk4M23g7YzP41VepHUcCmpKH5Os3agItXtGBq1uLaaf4df2lh7feF3fWYw1Foelde\neX5kmUzqTOcnXkq79NzJ6/JEdTYiKgeERxJGIu5RFZ7RaxmUBkRmlZ6MREYIxZUy\nybivBNKpUVCPLbo7xAgY4MM+ywKBgQDScKDqLnXOE7XN/4UIBEtAsH/Kmc2NghyT\nBvw6v4ZS0y/sFOi2H2dqPdwRbi3xHankhF0IOJh0X5qJu97g0022OHOlpdHR1nBU\nGVvZT1o0O8wIHqXSa1YIo4wL3ap2jRJyIDi7P4j1dB+Njj42Jq32lzhookudNdE6\nDyTD5taKpQKBgQCjAVfFb02D3Cej6mODhkfdA0OOnnJiVBtRe3Xav24YqBBHOMNd\n1xu3d2tE3/pyGitpxEkX3c0FAbVf4F6T8a6NMbfmV5mDvsvEOsbuO2pee2BAKQM+\npq+rowcYjnW94K33NzRsS9jQD3ik6AuHmDLZkB0hK6upurK07KNnGPJkZQKBgQCQ\nPEAeon9+IsZOjh8pMoA9s3uzap2XqyFYqMYCojk31aYYAvDJu1aPXBzVGZaFl9ZV\nWV/GfbwIr2plkw4dPNcb2S9yzue0Em1lRwhMNvZVrNKYkiEHyyfpvecETwdCQEjv\nTiR0OwTtb40c4ezEAtjjlhxEo1B+TV+9kpmZaEOOPQKBgQDGh7agpjMwlmr8ze31\n/esoctUHHiNcJpSqXfIW7IkRie47Tfw0pXfeTDerUiULm+7FM/wfeNHgLkuuAr5n\n9WRHqmWmBWvYJBZFwrlP7hUp7cP1tMbf7ZJaOOOt8qKMZBEORZYqIDpe5Bcblyp/\nDbRNIgVxq83hxdC/FAyoCgZqgw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "certificadosnano@certificadosnanoalfa.iam.gserviceaccount.com",
+  "client_id": "108727481875944153973",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/certificadosnano%40certificadosnanoalfa.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
