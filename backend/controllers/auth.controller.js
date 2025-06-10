@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 
-const secret = "7d1f7c836c67bd3b284a63356552407818d6488856be2eaf654b0a9026a96c7"
 export const adminLogin = (req,res) => {
     console.log("???")
     const { username, password } = req.body;
@@ -29,7 +28,7 @@ export const checkLogin = (req, res) => {
         return;
     }
 
-    jwt.verify(token, secret, (err, decoded) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {
             res.status(401).json({ message: 'Token inválido' });
             return;

@@ -144,8 +144,8 @@ const Certificado1Prof = ({data}) => (
                 <View style={styles.conteudo}>
                     <Text style={{...styles.textTituloConteudo }}>{data["name"]}</Text>
                     <Text style={{...styles.textConteudo }}>Conteúdo Programático - {data["hours"]} horas-aula{'\n'}{data["conteudoFinal"]}</Text>
+                    <Text style={{top:'430px',left:'745px',fontSize:"10px"}}>{data["id"]}</Text>
                 </View>
-                <Text style={{top:'430px',left:'745px',fontSize:"10px"}}>{data["id"]}</Text>
             </Page>
         </Document>
     );

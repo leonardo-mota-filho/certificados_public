@@ -10,6 +10,7 @@ export async function importSpreadsheet(req,res) {
     //Modelo: https://docs.google.com/spreadsheets/d/[id]/edit?usp=sharing
     //extract id
     var spreadsheetId = spreadsheetlink.split('*')[5]
+    console.log(spreadsheetId)
     var rows = await readSheet(spreadsheetId)
     var columns = rows.shift()
     var objs = rows.map(function(x) {
@@ -25,7 +26,6 @@ export async function importSpreadsheet(req,res) {
 
 async function readSheet(spreadsheetId){
     const sheets = google.sheets({version:'v4',auth})
-    //var spreadsheetId = '1uPShIi40y6_A_5_EJZEWd7y9DsuKSiIKBsy8-2x7J6A'
     const range = "A1:ZZZ"
     try{
         const response = await sheets.spreadsheets.values.get({

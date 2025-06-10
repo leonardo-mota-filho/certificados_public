@@ -14,7 +14,6 @@ export default function CertificateDoc() {
    useEffect(() => {getData(cpf,classid)}, []);
 
     const getImage = (signatureurl) =>{
-        //Modelo  "https://drive.google.com/uc?export=view&id=1croJDJUH0KclFRanXKIOd66WXfoP1iCA"
         var link = `https://drive.google.com/uc?export=view&id=${signatureurl.split('/')[5]}`
         services.getImage(link)
             .then((response)=>{
@@ -41,7 +40,11 @@ export default function CertificateDoc() {
                     }
                 }
                 setData({...response.data[0],conteudoFinal:conteudoFinal})
-                getImage(response.data[0]["signatureurl"])
+                if(response.data[0]["signatureurl"] != null) {
+                    getImage(response.data[0]["signatureurl"])
+                } else{
+                    setPrint(true)
+                }
             } else{
                 setErro(true)
             }
