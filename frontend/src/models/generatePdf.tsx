@@ -2,7 +2,7 @@ import { saveAs } from "file-saver";
 import JSZip from "jszip";
 import { createRoot } from 'react-dom/client';
 import {BlobProvider, PDFViewer} from '@react-pdf/renderer';
-import NanoCertificateModel from "../models/nanoCertificateModel.js";
+import CertificateModel from "../models/certificateModel.js";
 import services from "../services/services.js";
 
   export const validateImageSize = async (link) => {
@@ -80,7 +80,7 @@ import services from "../services/services.js";
       var signature = data["signatureurl"] == null ? null : await getImage(data["signatureurl"])
       
       const pdfElement = (
-        <BlobProvider document={<NanoCertificateModel data={data} signature={signature}/>}>
+        <BlobProvider document={<CertificateModel data={data} signature={signature}/>}>
           {({ blob, loading, error }) => {
             if (!loading && !error && blob) {
               resolve(blob);

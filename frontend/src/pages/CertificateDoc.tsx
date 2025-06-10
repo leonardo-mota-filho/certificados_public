@@ -2,7 +2,7 @@ import {useEffect ,useState} from "react";
 import {useParams} from "react-router-dom"
 import {PDFViewer} from '@react-pdf/renderer';
 import services from '../services/services.js'
-import NanoCertificateModel from "../models/nanoCertificateModel.js";
+import CertificateModel from "../models/certificateModel.js";
 
 export default function CertificateDoc() {
    const {cpf,classid} = useParams()
@@ -60,7 +60,7 @@ export default function CertificateDoc() {
                 {erro == true ? (<h1 className="font-bold text-red-500">Erro ao carregar certificado.</h1>) : (
                     print == true ? (
                         <PDFViewer key={Date.now()} className="w-full h-[1200px]" >
-                            <NanoCertificateModel data={data} signature={assinaturaProf}/>
+                            <CertificateModel data={data} signature={assinaturaProf}/>
                         </PDFViewer>
                     ) : (
                     <div>Carregando Certificado...</div>

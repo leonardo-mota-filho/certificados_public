@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function NanoCertificateModel({data,signature}){
+export default function CertificateModel({data,signature}){
     if(data["signatureurl"] == null){
         return <Certificado1Prof data={data}/>
     } else{
