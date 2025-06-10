@@ -1,32 +1,68 @@
-📜 Automatização de Emissão de Certificados
+# 📜 Gerenciamento e automatização de Emissão de Certificados  
 
-Este projeto tem como objetivo automatizar o processo de emissão de certificados, facilitando a geração em massa de documentos personalizados a partir de uma lista de participantes.
-✨ Funcionalidades
+**Projeto para geração automática de certificados em PDF, que podem ser acessados pelo seu estudante através de seu CPF, e podem ser administrados e bloqueados através de um sistema de administrador.
+Também contém funcionalidades extras, como um sistema de registro de presença com geração de QRCode.**  
 
-    Geração automática de certificados em PDF
+---
+## ! Imagens  
+![image](https://github.com/user-attachments/assets/975da2a0-0977-4a64-b1ca-9655d983907c)
 
-    Personalização com nomes dos participantes
+![image](https://github.com/user-attachments/assets/ad900c7c-504b-4db8-b8ea-1b05233f689a)
 
-    Suporte a modelos de certificados customizáveis
+![image](https://github.com/user-attachments/assets/d9628495-bd2a-426a-a491-5017990a06c3)
 
-    Processamento em lote a partir de planilhas (CSV/Excel)
+![image](https://github.com/user-attachments/assets/095be398-59b6-4611-bef6-92e468d3800c)
 
-    Opção para upload de listas de participantes
+![image](https://github.com/user-attachments/assets/342e5f5d-8bda-496a-9995-eeb3b3a9bf88)
 
-🛠️ Tecnologias Utilizadas
+![image](https://github.com/user-attachments/assets/599b817c-1a30-455a-b51d-076c0ff14ba1)
 
-    Python 3.x
+## ✨ Funcionalidades  
 
-    Biblioteca ReportLab (para geração de PDF)
+- 🖨️ Impressão de Certificados em PDF individualmente (pelo estudante) e coletivamente (todos os certificados de uma turma, pela página de administrador);
+- ✏️ **Personalização automática** com nomes, datas e informações específicas; 
+- 📊 Suporte a **Google Spreadsheets** como entrada de dados dos estudantes;
+- 🎨 **Modelos customizáveis** (assinaturas, nome de professores, etc.);
+- 📁 Menu intuitivo com alta camada de abstração para o administrador;
+- :cookie: Autenticação segura do administrador utilizando cookies http only com token JWT;
 
-    Pandas (para processamento de dados)
+---
 
-    (Adicione outras bibliotecas/frameworks que você estiver usando)
+## 🛠️ Tecnologias/Requisitos  
 
-📋 Pré-requisitos
+- ReactJS
+- NodeJS
+- Express
+- PostgreSQL
+- NPM
+- Google Spreadsheets API
+- Tailwind CSS
 
-    Python 3.x instalado
+---
 
-    Bibliotecas listadas em requirements.txt
+## ⚙️ Instalação  
+1. **Clonar repositório**:  
+   ```bash
+   git clone https://github.com/leonardo-mota-filho/certificados_public.git
+   cd certificados_public.git
+2. **Instalar dependências**:
+   ```bash
+   cd .\frontend\
+   npm install
+   cd .\backtend\
+   npm install
+3. **Hospedar banco de dados PostgreSQL, depois inicializá-lo utilizando o arquivo .sql na raíz do projeto;**
+4. **Inserir seu token de autenticação da Google Spreadsheets API em ./backend/models (arquivo deve se chamar google.json)**
+5. **Em .\backend\.env, alterar as variáveis do ambiente de acordo com as variáveis do banco de dados hospedado;**
+6. **Inicializar projeto**
+   ```bash
+   cd .\frontend\
+   npm run dev
+   cd .\backtend\
+   npm start
 
-    (Adicione outros requisitos específicos do seu projeto)
+NOTAS:
+1- Em um projeto formal, seria inviável deixar as variáveis do ambiente tão fáceis de serem acessadas;
+2- Em um projeto formal, o script que monta o banco de dados também não estaria incluido no projeto;
+3- Em um projeto formal, 
+4- Usuário e Senha padrão do administrador são ambos "admin", sem as aspas;
