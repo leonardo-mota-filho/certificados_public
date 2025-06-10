@@ -1,7 +1,7 @@
 # 📜 Gerenciamento e automatização de Emissão de Certificados  
 
 **Projeto para geração automática de certificados em PDF, que podem ser acessados pelo seu estudante através de seu CPF, e podem ser administrados e bloqueados através de um sistema de administrador.
-Também contém funcionalidades extras, como um sistema de registro de presença com geração de QRCode.**  
+Também contém funcionalidades extras, como um sistema de registro de presença com geração de QRCode. É uma versão genérica que construí com base em um outro projeto que fiz para um cliente na área de educação, com a devida permissão.**  
 
 ---
 ## ! Imagens  
