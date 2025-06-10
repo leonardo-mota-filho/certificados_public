@@ -64,7 +64,7 @@ Também contém funcionalidades extras, como um sistema de registro de presença
    npm start
 
 NOTAS:
-1- Em um projeto formal, seria inviável deixar as variáveis do ambiente tão fáceis de serem acessadas;
-2- Em um projeto formal, o script que monta o banco de dados também não estaria incluido no projeto;
-3- A página de login do administrador está na subpágina /adminLogin
-4- Usuário e Senha padrão do administrador são ambos "admin", sem as aspas;
+1. Em um projeto formal, seria inviável deixar as variáveis do ambiente tão fáceis de serem acessadas;
+2. Em um projeto formal, o script que monta o banco de dados também não estaria incluido no projeto;
+3. A página de login do administrador está na subpágina /adminLogin
+4. Usuário e Senha padrão do administrador são ambos "admin", sem as aspas;
