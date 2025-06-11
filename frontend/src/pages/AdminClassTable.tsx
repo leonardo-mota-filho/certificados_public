@@ -231,7 +231,7 @@ export default function AdminClassTable(){
                         tds.push(<td key={i} className="px-4 py-4">{negativeIcon}</td>)
                     }
                 }
-                var presenceRate = rollCalls[students[j]["scpf"]] == undefined ? 0 : Math.round(rollCalls[students[j]["scpf"]].split(';').length/classInfo["rollcallqtd"] * 100)
+                var presenceRate = calculatePresenceRate(students[j]["scpf"])
                 tds.push(<td key={i+1} className="px-4 py-4 bg-gray-300">{presenceRate >= 65 ? trueConfirmationIcon : trueNegativeIcon}</td>
 
                 )
@@ -271,10 +271,13 @@ export default function AdminClassTable(){
         
     }
 
+    const calculatePresenceRate = (studentCpf) => {
+        return rollCalls[studentCpf] == undefined ? 0 : Math.round(rollCalls[studentCpf].split(';').length/classInfo["rollcallqtd"] * 100)
+    }
     const setApprovedAsMarked = () => {
         var newListCheck = new Array()
         for(var i=0;i<students.length;i++){
-            var presenceRate = Math.round(rollCalls[students[i]["scpf"]].split(';').length/classInfo["rollcallqtd"] * 100)
+            var presenceRate = calculatePresenceRate(students[i]["scpf"])
             if(presenceRate >= 65){newListCheck.push(`${i}`)}
         }
         console.log(newListCheck)
@@ -390,12 +393,7 @@ export default function AdminClassTable(){
                     </div>
                     {table}
                 </div>
-                
-            </div>
-            
-        ) : (<div></div>)}
-        {showTable && 
-            <div>
+                <div>
                 <div className="flex flex-col h-15">
                     <h1 className="m-auto font-bold text-2xl">Tabela de Frequência</h1>
                 </div>
@@ -415,9 +413,10 @@ export default function AdminClassTable(){
                             <QRCodeSVG className="border-4 border-white" value={qrcode["link"] } size={300}/></button>
                         </div>
                 </div>}
-            </div>}
+            </div>
+            </div>
             
-            
+        ) : (<div></div>)}
     </div>
     )
 }

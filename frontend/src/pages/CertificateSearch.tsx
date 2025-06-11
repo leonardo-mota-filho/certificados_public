@@ -22,7 +22,7 @@ function Certificate(){
             if(Object.keys(userOptions[0]).length != 0){
                 ui.push(<dt key="username"><h1 className="font-bold">Aluno: {username}</h1></dt>)
                 userOptions.forEach((course,i) => {
-                    ui.push(<dt key={i}><h1 className="font-bold">{course["coursename"]}</h1></dt>)
+                    ui.push(<dt key={i}><h1 className="font-bold">{`${course["coursename"]} - ${course["id"]}`}</h1></dt>)
                     course["turmas"].forEach((turma,j) => {
                     const cod = turma.split("-")[0];
                     ui.push(<dd key={turma}><Link to={`/certificate/${cpf}/${turma}`} target="_blank">- Turma {cod}</Link></dd>)
@@ -30,7 +30,8 @@ function Certificate(){
             })
         }
         return(ui)
-        } catch{
+        } catch(err){
+            console.log(err)
             return(<h1 className="font-bold text-red-500">Nenhum certificado foi encontrado para um usuário com o CPF inserido.</h1>)
         }
     }
@@ -51,11 +52,11 @@ function Certificate(){
                 var courses : Object[] = [];
                 for (var i=0;i<response.data.length;i++){
                     if(response.data[i]["isavailable"] == true){
-                        if(!courses.includes(response.data[i]["name"])){
-                            courses.push({coursename:response.data[i]["name"],turmas:[response.data[i]["classid"]]})
+                        if(!courses.some(obj => obj["id"] == response.data[i]["id"])){
+                            courses.push({coursename:response.data[i]["name"],id:response.data[i]["id"],turmas:[response.data[i]["classid"]]})
                         } else{
                             for(var j=0;j<courses.length;j++){
-                                if(courses[j]["coursename"] == response.data[i]["name"]){
+                                if(courses[j]["id"] == response.data[i]["id"]){
                                     courses[j]["turmas"].push(response.data[i]["classid"])
                                 }
                                 break;
