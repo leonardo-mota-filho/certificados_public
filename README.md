@@ -3,6 +3,8 @@
 **Projeto para geração automática de certificados em PDF, que podem ser acessados pelo seu estudante através de seu CPF, e podem ser administrados e bloqueados através de um sistema de administrador.
 Também contém funcionalidades extras, como um sistema de registro de presença com geração de QRCode. É uma versão genérica que construí com base em um outro projeto que fiz para um cliente na área de educação, com a devida permissão.**  
 
+**No projeto original, utilizei Vercel e Railway como formas de hospedagem dos componentes do projeto, e depois o migrei para servidores próprios do cliente.**  
+
 ---
 ## ! Imagens  
 ![image](https://github.com/user-attachments/assets/975da2a0-0977-4a64-b1ca-9655d983907c)
@@ -62,7 +64,7 @@ Também contém funcionalidades extras, como um sistema de registro de presença
    npm start
 
 NOTAS:
-1- Em um projeto formal, seria inviável deixar as variáveis do ambiente tão fáceis de serem acessadas;
-2- Em um projeto formal, o script que monta o banco de dados também não estaria incluido no projeto;
-3- Em um projeto formal, 
-4- Usuário e Senha padrão do administrador são ambos "admin", sem as aspas;
+1. Em um projeto formal, seria inviável deixar as variáveis do ambiente tão fáceis de serem acessadas;
+2. Em um projeto formal, o script que monta o banco de dados também não estaria incluido no projeto;
+3. A página de login do administrador está na subpágina /adminLogin
+4. Usuário e Senha padrão do administrador são ambos "admin", sem as aspas;
